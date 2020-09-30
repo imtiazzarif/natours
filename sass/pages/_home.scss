@@ -35,7 +35,7 @@
 .section-tours {
   margin-top: -10rem;
   background-color: $color-grey-light-1;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
 }
 .section-tours {
   .col {
@@ -44,5 +44,13 @@
 }
 .section-stories {
   padding: 15rem 0;
-  background-color: $color-grey-light-1;
+
+  position: relative;
+}
+.section-stories {
+  .row {
+    &:not(:last-child) {
+      margin-bottom: 8rem;
+    }
+  }
 }
