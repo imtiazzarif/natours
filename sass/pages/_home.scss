@@ -1,14 +1,16 @@
+.row {
+  display: flex;
+  justify-content: center;
+  max-width: 114rem;
+  column-gap: 5rem;
+  margin: 0 auto;
+}
 .section-about {
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
-  .row {
-    display: flex;
-    justify-content: center;
-    padding: 0 5rem;
-    .col {
-      flex-basis: 45%;
-    }
+  .col {
+    flex-basis: 45%;
   }
 }
 .section-features {
@@ -20,14 +22,10 @@
     ),
     url(../img/nat-4.jpg) no-repeat center/cover;
 
-  .row {
-    display: flex;
-    justify-content: center;
-    column-gap: 5rem;
-    .col {
-      flex: 0 0 20%;
-    }
+  .col {
+    flex: 0 0 20%;
   }
+
   & > * {
     transform: skewY(7deg);
   }
@@ -40,14 +38,8 @@
   padding: 25rem 0 50rem 0;
 }
 .section-tours {
-  .row {
-    display: flex;
-    column-gap: 6rem;
-    justify-content: center;
-    justify-items: center;
-    .col {
-      flex-basis: 34rem;
-    }
+  .col {
+    flex-basis: 34rem;
   }
 }
 .section-stories {
