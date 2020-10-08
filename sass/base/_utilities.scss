@@ -7,9 +7,15 @@
 }
 .mb-md {
   margin-bottom: 4rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 .mb-lg {
   margin-bottom: 8rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 .mt-sm {
   margin-top: 2rem !important;

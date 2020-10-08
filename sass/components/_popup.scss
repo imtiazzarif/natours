@@ -10,9 +10,15 @@
   visibility: hidden;
   transition: all 0.4s;
 
+  backdrop-filter: blur(10px);
+
   &__content {
     display: flex;
+
     justify-content: space-evenly;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
     @include absCenter;
     width: 75%;
     background-color: $color-white;
@@ -29,10 +35,22 @@
     flex: 0 0 33.333%;
     height: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    @include respond(tab-land) {
+      flex-direction: row;
+
+      overflow: hidden;
+      width: 100%;
+      justify-content: center;
+    }
   }
   &__right {
     flex: 0 0 66.666%;
+    padding: 2rem 1rem;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
   }
 
   &__img {
@@ -45,9 +63,15 @@
     margin-bottom: 4rem;
     hyphens: auto;
     width: 85%;
+    padding-left: 1.5rem;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
+    @include respond(phone) {
+      column-count: 1;
+      width: 100%;
+      padding-left: 0;
+    }
   }
   &:target &__content {
     opacity: 1;

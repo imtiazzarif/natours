@@ -4,7 +4,6 @@ body {
   font-size: $default-font-size;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
   box-sizing: border-box;
 }
 .heading {
@@ -12,12 +11,17 @@ body {
     color: $color-white;
     text-transform: uppercase;
     margin-bottom: 60px;
+
     &--main {
       display: block;
       font-size: 6rem;
       font-weight: 400;
       letter-spacing: 3.5rem;
       animation: toRight 1s ease-out;
+      @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+      }
     }
     &--sub {
       display: block;
@@ -26,6 +30,9 @@ body {
       letter-spacing: 1.5rem;
       animation: toLeft 1s ease-out 1s;
       animation-fill-mode: backwards;
+      @include respond(phone) {
+        letter-spacing: 0.5rem;
+      }
     }
   }
   &-secondary {
@@ -42,6 +49,12 @@ body {
     letter-spacing: 2px;
     transition: all 0.2s;
     display: inline-block;
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
     &:hover {
       transform: skewY(2deg) skewX(5deg) scale(1.1);
       text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);

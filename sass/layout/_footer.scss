@@ -1,17 +1,26 @@
 .footer {
   .row {
-    justify-content: space-between;
+    justify-content: center;
     .col {
-      flex: 0 0 50%;
+      flex: 0 0 45%;
+      @include respond(tab-port) {
+        flex: 0 0 45%;
+      }
     }
   }
 
   background-color: $color-grey-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
+  @include respond(tab-port) {
+    padding-top: 8rem;
+  }
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
   &__logo {
     width: 15rem;
@@ -21,6 +30,9 @@
     border-top: 1px solid $color-grey-light-2;
     padding-top: 2rem;
     display: inline-block;
+    @include respond(tab-port) {
+      text-align: center;
+    }
   }
   &__list {
     list-style: none;
@@ -53,5 +65,9 @@
     border-top: 1px solid $color-grey-light-2;
     padding-top: 2rem;
     width: 85%;
+    @include respond(tab-port) {
+      text-align: center;
+      width: 100%;
+    }
   }
 }
